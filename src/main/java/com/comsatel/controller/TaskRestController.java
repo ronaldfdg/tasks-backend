@@ -19,6 +19,11 @@ public class TaskRestController {
 	@Autowired
 	private TaskService serviceTask;
 	
+	@GetMapping("/tasks")
+	public List<Task> index(){
+		return serviceTask.findAll();
+	}
+	
 	@PostMapping("/tasks")
 	public Task create(@RequestBody Task task) {
 		Task newTask = null;

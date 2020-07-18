@@ -22,4 +22,9 @@ public class TaskServiceImpl implements TaskService{
 		return repositoryTask.save(task);
 	}
 	
+	@Override
+	public List<Task> findAll() {
+		return repositoryTask.findAll(Sort.by("description"));
+	}
+	
 }

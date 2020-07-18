@@ -6,6 +6,7 @@ import com.comsatel.model.Task;
 
 public interface TaskService {
 
+	List<Task> findAll();
 	Task save(Task task);
 	
 }
