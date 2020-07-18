@@ -28,6 +28,16 @@ public class TaskServiceImpl implements TaskService{
 	}
 	
 	@Override
+	public Task findById(int id) {
+		Optional<Task> optional = repositoryTask.findById(id);
+		if(optional.isPresent()) {
+			return optional.get();
+		} else {
+			return null;
+		}
+	}
+	
+	@Override
 	public void deleteById(int id) {
 		repositoryTask.deleteById(id);
 	}
