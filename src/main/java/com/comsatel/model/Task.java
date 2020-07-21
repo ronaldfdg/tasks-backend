@@ -19,7 +19,7 @@ public class Task {
 	private String description;
 	
 	@Column(nullable = false)
-	private boolean pending = true;
+	private boolean pending;
 
 	public int getId() {
 		return id;
